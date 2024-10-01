@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [search, setSearch] = useState("")
   const [movies, setMovies] = useState([])
-  
+
   // d3919209
   const API_URL = "https://www.omdbapi.com/?apikey=d3919209";
   const searchMovies = async (title) => {
@@ -17,24 +17,23 @@ function App() {
   useEffect(()=>{
     searchMovies(search);
   }, [search]);
-   
 
   return (
-    // react fragment - <> </> if more than one elements...then u need to wrap them around the react fragment
-    <div className="app">
-      <h1>All time Popular Movies</h1>
+    <div className={`app ${search === "" ? "no-search" : ""} ${search === "" ? "bg-image" : ""}`}>
+      <h1>SearchMovies</h1>
+      <h4>Discover Your Next Favorite</h4>
       <div className="search">
-      <input 
-        type="text" 
-        placeholder='Search Movies'
-        value={search}
-        onChange={(e) => {setSearch(e.target.value)}}
-      />
-      <img 
-        src={SearchIcon} 
-        alt="search" 
-        onClick={() => {searchMovies(search)}}
-      />
+        <input 
+          type="text" 
+          placeholder='Search Movies'
+          value={search}
+          onChange={(e) => {setSearch(e.target.value)}}
+        />
+        <img 
+          src={SearchIcon} 
+          alt="search" 
+          onClick={() => {searchMovies(search)}}
+        />
       </div>
 
       {
@@ -47,7 +46,7 @@ function App() {
           </div>
         ) : (
           <div className="empty">
-            <h2>No Movies Found</h2>
+            <h2></h2>
           </div>
         ) 
       }
