@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+}
+
+body {
+  font-family: var(--font-roboto);
+  background-color: #212426;
+}
+
+.movie-details {
+  padding: 4rem;
+  color: #f9d3b4;
+}
+
+.details-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.movie-poster {
+  width: 50%;
+  max-width: 400px; 
+  border-radius: 12px;
+}
+
+.movie-info {
+  width: 50%; 
+  padding-left: 2rem;
+}
+
+.movie-info h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.movie-info p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #1f2123;
+  color: #a1a1a1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: var(--font-raleway);
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #343739;
+}
+
+.movie-plot {
+  margin-top: 2rem;
+  font-size: 1.2rem; 
+}
+
+@media screen and (max-width: 600px) {
+  .movie-details {
+    padding: 2rem;
+  }
+
+  .movie-poster {
+    max-width: 100%; 
+    width: 100%; 
+    margin-bottom: 1rem; 
+  }
+
+  .movie-info {
+    width: 100%; 
+    padding-left: 0; 
+  }
+
+  .movie-info h1 {
+    font-size: 2rem;
+  }
+
+  .movie-info p {
+    font-size: 1rem;
+  }
+
+  .movie-plot {
+    font-size: 1rem; 
+  }
+}

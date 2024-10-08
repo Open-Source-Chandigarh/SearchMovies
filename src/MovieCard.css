@@ -1,0 +1,44 @@
+.movie {
+    width: 310px;
+    height: 460px;
+    margin: 1.5rem;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  .movie img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+  }
+  
+  .movie .movie-info {
+    z-index: 2;
+    width: 100%;
+    background-color: #F4CFB1; 
+    padding: 16px;
+    position: absolute;
+    height: 15%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  
+  .movie .movie-info h3 {
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+    color: #212426; 
+  }
+  
+  .movie:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
+  }
+  
